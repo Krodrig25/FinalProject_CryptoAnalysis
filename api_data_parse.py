@@ -128,14 +128,6 @@ crypto_df = crypto_df[["name", "symbol", "vlad club cost", "marketcap rank", "ma
 # Set float decimal count to 2
 pd.options.display.float_format = "{:,.2f}".format
 
-# Set "name" as index for both dataframes
-crypto_df.set_index("name", inplace=True)
-profile_df.set_index("name", inplace=True)
-
-# Remove row with problematic category from both dataframes
-crypto_df = crypto_df.drop("bitcoin-gold", axis=0)
-profile_df = profile_df.drop("bitcoin-gold", axis=0)
-
 # Convert dataframes to csv files
 crypto_df.to_csv("crypto_df.csv")
 profile_df.to_csv("profile_df.csv")
