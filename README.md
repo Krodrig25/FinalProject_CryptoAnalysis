@@ -20,13 +20,13 @@ Because we used Streamlit, this project is divided into two files: one for the A
 
 The first file, `api_data_parse.py`, imports the libraries and dependancies, pulls from the API's, and parses the data to create two csv files, one with quantitative measures, the other with coin profile data and links.
 
-![1](images/01.PNG)
+![1](images/01.png)
 
-![2](images/02.PNG)
+![2](images/02.png)
 
-![3](images/03.PNG)
+![3](images/03.png)
 
-![4](images/04.PNG)
+![4](images/04.png)
 
 The second file, `st_crypto_value.py`, reads the csv's into dataframes that are used to construct the Streamlit app. We created selectboxes to filter by category and sector, the latter being a subgrouping of the former, and when the corresponding checkboxes were selected, the dataframes filtered by those selections and displayed that dataset along with a chart comparing the Vlad Club Cost for each coin in that group.
 
@@ -36,16 +36,16 @@ Below the category and sector filters are three selectboxes containing all of th
 
 Finally, at the bottom of the sidebar, there are links to the API's used in this project.
 
-![5](images/05.PNG)
+![5](images/05.png)
 
-![6](images/06.PNG)
+![6](images/06.png)
 
-![7](images/07.PNG)
+![7](images/07.png)
 
-![8](images/08.PNG)
+![8](images/08.png)
 
-![9](images/09.PNG)
+![9](images/09.png)
 
-![10](images/10.PNG)
+![10](images/10.png)
 
-![11](images/11.PNG)
+![11](images/11.png)
