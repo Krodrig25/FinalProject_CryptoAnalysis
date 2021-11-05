@@ -54,18 +54,18 @@ Since the data is in csv files, the profiles and links can be used from `profile
 
 ![12](images/tableau/crypto-icons.png)
 
-![13](images/tableau/24H Volume Change.png)
+![13](images/tableau/24H_Volume_Change.png)
 
-![14](images/tableau/24H Change.png)
+![14](images/tableau/24H_Change.png)
 
-![15](images/tableau/7D Change.png)
+![15](images/tableau/7D_Change.png)
 
-![16](images/tableau/30D Change.png)
+![16](images/tableau/30D_Change.png)
 
-![17](images/tableau/60D Change.png)
+![17](images/tableau/60D_Change.png)
 
-![18](images/tableau/AVG Price Cats.png)
+![18](images/tableau/AVG_Price_Cats.png)
 
-![19](images/tableau/AVG Vlad.png)
+![19](images/tableau/AVG_Vlad.png)
 
-![20](images/tableau/Marketcap USD Category.png)
+![20](images/tableau/Marketcap_USD_Category.png)
