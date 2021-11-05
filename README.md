@@ -49,3 +49,23 @@ Finally, at the bottom of the sidebar, there are links to the API's used in this
 ![10](images/10.png)
 
 ![11](images/11.png)
+
+Since the data is in csv files, the profiles and links can be used from `profile_df.csv` to learn more about promising currencies, and the data in `crypt_df.csv` can be loaded into programs such as tableau for presentations, such as the following images show.
+
+![12](images/tableau/crypto-icons.png)
+
+![13](images/tableau/24H Volume Change.png)
+
+![14](images/tableau/24H Change.png)
+
+![15](images/tableau/7D Change.png)
+
+![16](images/tableau/30D Change.png)
+
+![17](images/tableau/60D Change.png)
+
+![18](images/tableau/AVG Price Cats.png)
+
+![19](images/tableau/AVG Vlad.png)
+
+![20](images/tableau/Marketcap USD Category.png)
