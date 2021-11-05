@@ -41,44 +41,37 @@ if st.sidebar.checkbox("Show Sector Data"):
 
 # Create new dataframe to hold user-selected data.
 streamlit_df = crypto_df[0:0]
+coin1_df = crypto_df[0:0]
+coin2_df = crypto_df[0:0]
+coin3_df = crypto_df[0:0]
 crypto_df.sort_index(axis=0, inplace=True)
 
-# Create selectbox to choose data on specific coins for comparison.
-selected_name = st.sidebar.selectbox(
-    "Choose Coins to Compare",
+# Create selectboxes to choose data on specific coins for comparison.
+selected_name1 = st.sidebar.selectbox(
+    "Choose First Coin to Compare",
+    crypto_df.index
+)
+
+selected_name2 = st.sidebar.selectbox(
+    "Choose Second Coin to Compare",
+    crypto_df.index
+)
+selected_name3 = st.sidebar.selectbox(
+    "Choose Third Coin to Compare",
     crypto_df.index
 )
 
 # Create a button to add selected coin to dataframe.
-if st.sidebar.button("Add Coin for Comparison"):
-    streamlit_df.append(crypto_df[crypto_df.index == selected_name])
-
-# Create a button to clear the dataframe.
-if st.sidebar.button("Clear Comparison List"):
-    streamlit_df = streamlit_df[0:0]
+if st.sidebar.button("Add Coins for Comparison"):
+    coin1_df = pd.concat([streamlit_df, crypto_df[crypto_df.index == selected_name1]])
+    coin2_df = pd.concat([streamlit_df, crypto_df[crypto_df.index == selected_name2]])
+    coin3_df = pd.concat([streamlit_df, crypto_df[crypto_df.index == selected_name3]])
 
 # Create checkbox to show data on specific coins for comparison.
 if st.sidebar.checkbox("Show Comparison Data"):
-    st.write(streamlit_df)
-    st.bar_chart(streamlit_df["vlad club cost"])
-
-# Break down `profile_df` into dictionaries for better Streamlit display.  
-profile_dict = profile_df.to_dict()
-tagline = profile_dict["tagline"]
-profile = profile_dict["profile"]
-links = profile_dict["links"]
-
-# Create selectbox to choose profile data on specific coins.
-profile_data = st.sidebar.selectbox(
-    "Select Coin for Profile Info",
-    profile_df.index
-)
-
-# Create checkbox to show profile data on specific coins.
-if st.sidebar.checkbox("Show Profile Data"):
-    st.write(tagline[tagline["name"] == profile_data])
-    st.write(profile[profile["name"] == profile_data])
-    st.write(links[links["name"] == profile_data])
+    st.write(coin1_df)
+    st.write(coin2_df)
+    st.write(coin3_df)
 
 # Write data sources and links at bottom of sidebar.
 st.sidebar.markdown("Data provided by:")
