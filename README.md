@@ -1,4 +1,4 @@
-# Crypto Analysis Final Project 
+# Crypto Analysis
 
 Ryan Scott & Kevin Rodriguez
 
